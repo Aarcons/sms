@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html id="sms-index">
 <head>
 	<title>Sms</title>
 	<meta charset="utf-8">
@@ -22,6 +22,9 @@
 		}
 		h1,h2,h3,h4,h5,h6,p,li{
 			font-family: Raleway;
+		}
+		#sms-index{
+			scroll-behavior: smooth;
 		}
   		#main-navbar .navbar-brand img{
   			height: 80%;
@@ -209,6 +212,10 @@
 		#tabs .tab-content-container{
 			border-bottom: 1px dashed #2474ae;
 		}
+		#tabs .tab-content li::marker{
+			color: #2474ae;
+			font-size: 1.3rem;
+		}
 		#testimonial .carousel-indicators{
 			top: 9rem;
 		}
@@ -224,6 +231,50 @@
 		#testimonial .testimonial-container a{
 			width: 2%;
 		}
+		#contact-footer .contact-footer-container{
+			background-color: #2474ae;
+			color: #fff;
+		}
+		#contact-footer .contact-form .form-control{
+			font-size: 0.9rem;
+			border-radius: 0;
+		}
+		#contact-footer .contact-head{
+			border-bottom: 1px solid #fff;
+		}
+		#contact-footer .contact-form .sb-btn{
+			background-color: #2f2d2d;
+			color: #fff;
+			border-radius: 5px;
+		}
+		#contact-footer .contact-form .sb-btn:hover{
+			opacity: 0.8;
+		}
+		#price-table .price-table-tb{
+			border: 1px solid #000;
+			border-radius: 5px;
+			background-color: #d1dae8;
+			box-shadow: 0 0 10px 0 rgba(0,24,128,0.1);
+		}
+		#price-table .price-table-tb td{
+			border: 1px solid #000;
+			border-left: none;
+			border-right: none;
+		}
+		#price-table .price-table-tb .right-border{
+			border-right: 1px solid #000;
+		}
+		#price-table .price-table-tb .start-row{
+			background-color: #fff;
+			border-top: none;
+			border-radius: 5px 5px 0 0;
+		}
+		#price-table .price-table-tb .start-row img{
+			height: 70%;
+		}
+		#price-table .price-table-tb .last-row{
+			border-bottom: none;
+		}
   	</style>
 
 </head>
@@ -232,8 +283,10 @@
 		<nav class="navbar p-0">
 		  <a class="navbar-brand col-3 logo" href="#"><img src="images/aarcons.png"></a>
 		  <ul class="list-unstyled d-flex social-icon mb-0">
-		  	<li class="mr-md-3 mr-2"><a href="#" class="text-white">About Us</a></li>
-		  	<li class="mr-md-3 mr-2"><a href="#" class="text-white">Contact Us</a></li>
+		  	<li class="mr-md-3 mr-2"><a href="#tabs" class="text-white">Benefits</a></li>
+		  	<li class="mr-md-3 mr-2"><a href="#price-table" class="text-white">Pricing</a></li>
+		  	<li class="mr-md-3 mr-2"><a href="#testimonial" class="text-white">Testimonial</a></li>
+		  	<li class="mr-md-3 mr-2"><a href="#contact-footer" class="text-white">Contact Us</a></li>
 		  </ul>
 		</nav>
 	</section>
@@ -521,9 +574,125 @@
 			    <span class=""><i class="fas fa-angle-right text-dark"></i></span>
 			    <span class="sr-only">Next</span>
 			  </a>
+			</div>		
+		</div>
+	</section>
+	<section id="price-table">
+		<div class="container-fluid mb-5 pt-5">
+			<h4 class="text-center mb-4">Simple, Flexible Bulk Sms Pricing <hr class="divider"></h4>
+			<div class="row">
+				<div class="col-md-6">
+					<div class="price-table-tb container pl-0 pr-0">
+						<table class="container">
+							<tr class="col-md-5">
+								<td class="text-center p-2 mb-0 right-border start-row"><h4>Quantity & Prices</h4></td>
+								<td class="text-center p-2 mb-0 start-row"><img src="images/pricing-icon-sp.svg"></td>
+							</tr>
+							<tr class="col-md-5">
+								<td class="text-center p-2 mb-0 right-border"><h5>10,000 Sms</h5></td>
+								<td class="text-center p-2 mb-0"><h5>18p/sms</h5></td>
+							</tr>
+							<tr class="col-md-5">
+								<td class="text-center p-2 mb-0 right-border"><h5>20,000 Sms</h5></td>
+								<td class="text-center p-2 mb-0"><h5>16p/sms</h5></td>
+							</tr>
+							<tr>
+								<td class="text-center p-2 mb-0 right-border"><h5>50,000 Sms</h5></td>
+								<td class="text-center p-2 mb-0"><h5>15p/sms</h5></td>
+							</tr>
+							<tr>
+								<td class="text-center p-2 mb-0 right-border"><h5>1 Lakh Sms</h5></td>
+								<td class="text-center p-2 mb-0"><h5>13.5p/sms</h5></td>
+							</tr>
+							<tr>
+								<td class="text-center p-2 mb-0 right-border"><h5>Above 1 Lakh Sms</h5></td>
+								<td class="text-center p-2 mb-0"><h5>13.5p/sms</h5></td>
+							</tr>
+							<tr>
+								<td class="text-center p-2 mb-0 last-row"><h6>*GST applicable on all prices.</h6></td>
+								<td class="text-center p-2 mb-0 last-row"></td>
+							</tr>
+						</table>
+					</div>
+					<h6 class="pt-3">SMS bundle prices are inclusive of 2.5paisa per SMS DLT scrubbing charges.</h6>	
+				</div>
+				<div class="col-md-6">
+					<h5 class=" text-center">Pay As You Go. No Hidden Setup Fees.</h5>
+					<ul>
+						<li>Lifetime Validity for SMS Credits</li>
+						<li>Credits can be used for both Promotional & Transactional SMS</li>
+						<li>Free access to web portal & SMS APIs</li>
+					</ul>
+				</div>
 			</div>
-				
 			
+		</div>
+	</section>
+	<section id="contact-footer">
+		<div class="container-fluid contact-footer-container p-5">
+			<div class="row">
+				<div class="col-md-4">
+					<img src="images/aarcons.png" style="height: 3rem; ">
+					<p class="mt-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. </p>
+				</div>
+				<div class="col-md-4">
+					<h5 class="contact-head mb-3 pb-2">Contact Us</h5>
+					<div class="form-div">
+						<form method="post" class="contact-form">
+							<div class="form-group">
+								<input type="text" name="name" class="form-control" placeholder="Your Name" required>
+							</div>
+							<div class="form-group">
+								<input type="email" name="email" class="form-control" placeholder="Email Id" required>
+							</div>
+							<div class="form-group">
+								<input type="tel" name="phone" class="form-control" pattern="^(?:(?:\+|0{0,2})91(\s*[\-]\s*)?|[0]?)?[789]\d{9}$" placeholder="Phone No." required>
+							</div>
+							<div class="form-group">
+								<input type="text" name="subject" class="form-control" placeholder="Subject" required>
+							</div>
+							<div class="form-group">
+								<textarea class="form-control" name="message" rows="5" placeholder="Your Message" required></textarea>
+							</div>
+							<div class="d-flex justify-content-center">
+								<button type="submit" class="btn sb-btn">Submit</button>
+							</div>
+						</form>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<h5 class="ml-4 contact-head mb-3 pb-2">Get in Touch</h5>
+					<div class="container-fluid ml-3">
+						<div class="row">
+							<div class="col-1">
+								<i class="fas fa-map-marker-alt"></i>
+							</div>
+							<div class="col-11">
+								<p>Gyanodaya Campus, Gram: Kanawati, Neemuch (M.P) - 458441</p>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-1">
+								<i class="fas fa-mobile-alt"></i>
+							</div>
+							<div class="col-11">
+								<p>+91 7566075707</p>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-1">
+								<i class="fas fa-envelope"></i>
+							</div>
+							<div class="col-11">
+								<p>aarambhnmh@gmail.com</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 	</section>
 </body>
