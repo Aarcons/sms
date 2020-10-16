@@ -9,12 +9,12 @@
 	<link rel="stylesheet" type="text/css" href="lib/bootstrap-4.4.1/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="lib/fontawesome/css/all.min.css">
 	<link rel="stylesheet" type="text/css" href="lib/animate-master/animate.min.css">
-	<link rel="stylesheet" type="text/css" href="lib/fontawesome/css/all.min.css">
-	<link rel="stylesheet" type="text/css" href="lib/animate-master/animate.min.css">
 	<!-- <link rel="stylesheet" type="text/css" href="css/main.css"> -->
+	<!-- <link rel="stylesheet" type="text/css" href="lib/typed.js-master/lib/typed.min.js"> -->
 	<link rel="icon" type="image/png" href="images/favicon.png">
 	<script src="lib/jquery-3.4.1/jquery-3.4.1.min.js"></script>
   	<script src="lib/waypoints-master/lib/jquery.waypoints.min.js"></script>
+  	
   	<style type="text/css">
   		@font-face {
 		  font-family: Raleway;
@@ -232,7 +232,7 @@
 			width: 2%;
 		}
 		#contact-footer .contact-footer-container{
-			background-color: #2474ae;
+			background-color: #2d2d2d;
 			color: #fff;
 		}
 		#contact-footer .contact-form .form-control{
@@ -243,7 +243,7 @@
 			border-bottom: 1px solid #fff;
 		}
 		#contact-footer .contact-form .sb-btn{
-			background-color: #2f2d2d;
+			background-color: #2474ae;
 			color: #fff;
 			border-radius: 5px;
 		}
@@ -275,6 +275,20 @@
 		#price-table .price-table-tb .last-row{
 			border-bottom: none;
 		}
+		#price-table .price-tb-list li{
+			list-style-image: url(images/correct.svg);
+		}
+		#price-table .price-tb-list li::marker{
+			font-size: 1.8rem;
+		}
+		#price-table .price-tb-cont-bg {
+			background-color: #f5fafe;
+		}
+		#hero-banner .content p{
+			position: absolute;
+			top: 11rem;
+		}
+
   	</style>
 
 </head>
@@ -293,8 +307,8 @@
 	<section id="hero-banner">
 		<div class="container-fluid p-5">
 			<div class="row pt-5">
-				<div class="col-md-5 mt-5 pt-5">
-					<h2 class="pt-5 ml-3 text-white">Manage your business communications in one place.</h2>
+				<div class="col-md-5  pt-5 content">
+					<h2 class="pt-5 ml-3 text-white" id="typed"></h2>
 					<p class="text-justify ml-3 text-white">Our passion to work hard and deliver excellent results. It could solve the needs of your customers and develop innovation.</p>
 				</div>
 				<div class="col-md-7 mt-5">
@@ -324,7 +338,7 @@
 	<section id="tabs">
 		<div class="container-fluid pt-3 pl-0 pr-0">
 			<h4 class="text-center">We power messages that encourage millions of users to take a next step, everyday. <hr class="divider"></h4>
-			<div class="tab-content-container d-flex justify-content-center mt-5 pl-3 pr-3">
+			<div class="tab-content-container d-flex justify-content-center mt-5 pl-3 pr-3" id="tab-carousel">
 				<ul class="nav nav-tabs">
 					<li class="nav-item">
 						<a href="#notify" class="nav-link active" data-toggle="tab">
@@ -528,57 +542,59 @@
 		</div>
 	</section>
 	<section id="testimonial">
-		<h4 class="text-center mt-5">What Our Client Say <hr class="divider"></h4>
-		<div class="container mb-5 testimonial-container">
-			<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-			  <div class="carousel-inner mb-5 pl-5 pr-5">
-			    <div class="carousel-item active">
-		            <p class="text-center"><i class="fa fa-quote-left"></i> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-		            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-		            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-		            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-		            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-		            proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
-		            <i class="fas fa-quote-right"></i></p>
-			    </div>
-			    <div class="carousel-item">
-		            <p class="text-center"><i class="fa fa-quote-left"></i> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-		            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-		            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-		            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-		            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-		            proident, sunt in culpa qui officia deserunt mollit anim id est laborum. <i class="fas fa-quote-right"></i></p>
-			    </div>
-			    <div class="carousel-item">
-		            <p class="text-center"><i class="fa fa-quote-left"></i> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-		            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-		            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-		            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-		            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-		            proident, sunt in culpa qui officia deserunt mollit anim id est laborum. <i class="fas fa-quote-right"></i></p>
-			    </div>
-			  </div>
-			  	<ol class="carousel-indicators">
-		          <li data-target="#quote-carousel" data-slide-to="0" class="active">
-		          </li>
-		          <li data-target="#quote-carousel" data-slide-to="1">
-		          </li>
-		          <li data-target="#quote-carousel" data-slide-to="2">
-		          </li>
-		        </ol>
-			  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-			    <span class=""><i class="fas fa-angle-left text-dark"></i></span>
-			    <span class="sr-only">Previous</span>
-			  </a>
-			  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-			    <span class=""><i class="fas fa-angle-right text-dark"></i></span>
-			    <span class="sr-only">Next</span>
-			  </a>
-			</div>		
+		<div class="container-fluid pb-5 mb-3">
+			<h4 class="text-center mt-5">What Our Client Say <hr class="divider"></h4>
+			<div class="container mb-5 testimonial-container">
+				<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+				  <div class="carousel-inner mb-5 pl-5 pr-5">
+				    <div class="carousel-item active">
+			            <p class="text-center"><i class="fa fa-quote-left"></i> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			            proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+			            <i class="fas fa-quote-right"></i></p>
+				    </div>
+				    <div class="carousel-item">
+			            <p class="text-center"><i class="fa fa-quote-left"></i> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			            proident, sunt in culpa qui officia deserunt mollit anim id est laborum. <i class="fas fa-quote-right"></i></p>
+				    </div>
+				    <div class="carousel-item">
+			            <p class="text-center"><i class="fa fa-quote-left"></i> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			            proident, sunt in culpa qui officia deserunt mollit anim id est laborum. <i class="fas fa-quote-right"></i></p>
+				    </div>
+				  </div>
+				  	<ol class="carousel-indicators">
+			          <li data-target="#quote-carousel" data-slide-to="0" class="active">
+			          </li>
+			          <li data-target="#quote-carousel" data-slide-to="1">
+			          </li>
+			          <li data-target="#quote-carousel" data-slide-to="2">
+			          </li>
+			        </ol>
+				  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+				    <span class=""><i class="fas fa-angle-left text-dark"></i></span>
+				    <span class="sr-only">Previous</span>
+				  </a>
+				  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+				    <span class=""><i class="fas fa-angle-right text-dark"></i></span>
+				    <span class="sr-only">Next</span>
+				  </a>
+				</div>		
+			</div>
 		</div>
 	</section>
 	<section id="price-table">
-		<div class="container-fluid mb-5 pt-5">
+		<div class="container-fluid pb-5 pt-5 price-tb-cont-bg">
 			<h4 class="text-center mb-4">Simple, Flexible Bulk Sms Pricing <hr class="divider"></h4>
 			<div class="row">
 				<div class="col-md-6">
@@ -617,12 +633,13 @@
 					<h6 class="pt-3">SMS bundle prices are inclusive of 2.5paisa per SMS DLT scrubbing charges.</h6>	
 				</div>
 				<div class="col-md-6">
-					<h5 class=" text-center">Pay As You Go. No Hidden Setup Fees.</h5>
-					<ul>
+					<h5 class=" text-center mt-4">Pay As You Go. No Hidden Setup Fees.</h5>
+					<ul class="price-tb-list ml-3">
 						<li>Lifetime Validity for SMS Credits</li>
 						<li>Credits can be used for both Promotional & Transactional SMS</li>
 						<li>Free access to web portal & SMS APIs</li>
 					</ul>
+					<p class="text-justify">Open up an easy, cost-effective 2-way communication channel with your customers and  prospects. Increase sales and customer satisfaction with smarter SMS campaigns, instant OTPs, notifications, and other award winning bulk SMS services. See how businesses are using bulk messaging to send crisis comms and go digital during COVID-19.</p>
 				</div>
 			</div>
 			
@@ -698,4 +715,59 @@
 </body>
 	<script src="lib/popperjs-1.16.0/javascript/popper.min.js"></script>
 	<script src="lib/bootstrap-4.4.1/js/bootstrap.min.js"></script>
+	<script src="lib/typed.js-master/lib/typed.min.js"></script>
+	<!-- <script type="text/javascript">
+		var i = 0;
+		var txt = "Manage your business communications in one place.";
+		var z = 100;
+		function typewriter(){
+			if(i<txt.length){
+				document.getElementById("type").innerHTML += txt.charAt(i);
+				i++;
+				setTimeout(typewriter, z);
+			}
+		}
+		window.onload(typewriter());
+		
+		
+
+	</script> -->
+	<script type="text/javascript">
+		 var typed2 = new Typed('#typed', {
+		    strings: ['Manage your business communications in one place.', 'APIs Messaging', 'Transactional SMS','OTP SMS', 'Promotional SMS'],
+		    typeSpeed: 80,
+		    backSpeed: 50,
+		    backDelay: 1500,
+    		startDelay: 1000,
+		    fadeOut: true,
+		    loop: true,
+		    cursorChar: "",
+		  });
+
+	</script>
+	<script type="text/javascript">
+		var tabChange = function(){
+        var tabs = $('.nav-tabs > li');
+        var active = tabs.filter('.active');
+        var next = active.next('li').length? active.next('li').find('a') : tabs.filter(':first-child').find('a');
+        // Bootsrap tab show, para ativar a tab
+        next.tab('show')
+    }
+    // Tab Cycle function
+    var tabCycle = setInterval(tabChange, 1000)
+    // Tab click event handler
+    $(function(){
+        $('.nav-tabs a').click(function(e) {
+            e.preventDefault();
+            // Parar o loop
+            clearInterval(tabCycle);
+            // mosta o tab clicado, default bootstrap
+            $(this).tab('show')
+            // Inicia o ciclo outra vez
+            setTimeout(function(){
+                tabCycle = setInterval(tabChange, 1000)//quando recomeça assume este timing
+            }, 1000);
+        });
+    });
+	</script>
 </html>
