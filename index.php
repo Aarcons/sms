@@ -46,8 +46,8 @@
 		  opacity: 0.4;
 		}
 		.animated-bg i {
-		    top: 14rem;
-		    right: 23.5rem;
+		    top: 38%;
+		    right: 29.5%;
 		    position: absolute;
 		    height: 50px;
 		    width: 50px;
@@ -124,9 +124,12 @@
 			background-repeat: no-repeat;
 		}
 		@keyframes send{
-			0%{top: 25.5rem; right: 16rem; height: 1%; width: 1%;}
+			/*0%{top: 25.5rem; right: 16rem; height: 1%; width: 1%;}
 			50% {top: 13.5rem; right: 22.8rem; height: 3%; width: 3%;}
-			100% {top: 25.5rem; right: 32.5rem; height: 1%; width: 1%;}
+			100% {top: 25.5rem; right: 32.5rem; height: 1%; width: 1%;}*/
+			0%{top: 70.5%; right: 20.5%; height: 1%; width: 1%;}
+			50% {top: 36%; right: 29%; height: 3%; width: 3%;}
+			100% {top: 70%; right: 41.5%; height: 1%; width: 1%;}
 		}
 		.divider{
 			background: #000;
