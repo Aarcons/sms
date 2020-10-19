@@ -11,7 +11,7 @@
 	<link rel="stylesheet" type="text/css" href="lib/animate-master/animate.min.css">
 	<!-- <link rel="stylesheet" type="text/css" href="css/main.css"> -->
 	<!-- <link rel="stylesheet" type="text/css" href="lib/typed.js-master/lib/typed.min.js"> -->
-	<link rel="icon" type="image/png" href="images/favicon.png">
+	<!-- <link rel="icon" type="image/png" href="images/favicon.png"> -->
 	<script src="lib/jquery-3.4.1/jquery-3.4.1.min.js"></script>
   	<script src="lib/waypoints-master/lib/jquery.waypoints.min.js"></script>
   	
@@ -251,29 +251,46 @@
 			opacity: 0.8;
 		}
 		#price-table .price-table-tb{
-			border: 1px solid #000;
+			/*border: 1px solid #000;*/
 			border-radius: 5px;
-			background-color: #d1dae8;
-			box-shadow: 0 0 10px 0 rgba(0,24,128,0.1);
+			background-color: #fff;
+			box-shadow: 0px 2px 18px 0px rgba(0,0,0,0.3);
 		}
 		#price-table .price-table-tb td{
-			border: 1px solid #000;
+			/*border: 1px solid #000;*/
 			border-left: none;
 			border-right: none;
 		}
+		#price-table .price-table-tb td h4{
+			font-size: 1.2rem;
+			font-weight: 700;
+			text-transform: uppercase;
+		}
+		#price-table .price-table-tb td h5{
+			font-size: 1rem;
+			font-weight: 600;
+		}
+		#price-table .price-table-tb td h6{
+			font-weight: 600;
+			/*text-transform: uppercase;*/
+		}
 		#price-table .price-table-tb .right-border{
-			border-right: 1px solid #000;
+			/*border-right: 1px solid #000;*/
 		}
 		#price-table .price-table-tb .start-row{
-			background-color: #fff;
+			background-color: #008df9;
 			border-top: none;
-			border-radius: 5px 5px 0 0;
+			/*border-radius: 5px 5px 0 0;*/
+			color: #fff;
 		}
 		#price-table .price-table-tb .start-row img{
 			height: 70%;
 		}
 		#price-table .price-table-tb .last-row{
 			border-bottom: none;
+		}
+		#price-table .price-table-tb .alternate{
+			background-color: #eee;
 		}
 		#price-table .price-tb-list li{
 			list-style-image: url(images/correct.svg);
@@ -284,34 +301,86 @@
 		#price-table .price-tb-cont-bg {
 			background-color: #f5fafe;
 		}
+		#price-table .price-table-tb .sb-btn{
+			background-color: #2474ae;
+			color: #fff;
+		}
+		#price-table .price-table-tb .sb-btn:hover{
+			opacity: 0.8;
+		}
 		#hero-banner .content p{
 			position: absolute;
-			top: 11rem;
+			top: 9rem;
 		}
-
+		#contact-footer .copyright{
+			background-color: #2d2d2d;
+		}
+		@media screen and (max-width: 768px){
+			#tabs .nav-item .active{
+				border-bottom: none!important;
+			}
+			#sms-accordion .row h5{
+				font-size: 1rem;
+			}
+			#testimonial .carousel-indicators{
+				top: 24rem;
+			}
+			#hero-banner .hero-img{
+	  			height: 70%;
+	  			width: 70%;
+	  		}
+	  		.animated-bg i{
+	  			top: 61%;
+	  			right: 44%;
+	  		}
+	  		#hero-banner .content p{
+	  			position: unset;
+	  		}
+	  		#hero-banner .heading{
+	  			height: 8rem;
+	  			width: 100%;
+	  		}
+	  		#hero-banner .wave{
+	  			height: 32px;
+	  		}
+	  		#hero-banner .message{
+				display: none;	  			
+	  		}
+	  		#main-navbar .navbar-brand img{
+	  			height: 100%;
+	  			width: 100%;
+	  		}
+		}
   	</style>
 
 </head>
 <body>
 	<section id="main-navbar">
-		<nav class="navbar p-0">
+		<nav class="navbar navbar-expand-lg p-0">
 		  <a class="navbar-brand col-3 logo" href="#"><img src="images/aarcons.png"></a>
-		  <ul class="list-unstyled d-flex social-icon mb-0">
-		  	<li class="mr-md-3 mr-2"><a href="#tabs" class="text-white">Benefits</a></li>
-		  	<li class="mr-md-3 mr-2"><a href="#price-table" class="text-white">Pricing</a></li>
-		  	<li class="mr-md-3 mr-2"><a href="#testimonial" class="text-white">Testimonial</a></li>
-		  	<li class="mr-md-3 mr-2"><a href="#contact-footer" class="text-white">Contact Us</a></li>
-		  </ul>
+		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		    <span class="navbar-toggler-icon"><i class="fas fa-bars text-white p-2"></i></span>
+		    </button>
+		  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+		  	<ul class="list-unstyled d-flex social-icon mb-0 navbar-nav ml-auto text-right ">
+			  	<li class="mr-md-3 mr-2 nav-item dropdown"><a href="#tabs" class="text-white nav-item">Benefits</a></li>
+			  	<li class="mr-md-3 mr-2 nav-item dropdown"><a href="#price-table" class="text-white nav-item">Pricing</a></li>
+			  	<li class="mr-md-3 mr-2 nav-item dropdown"><a href="#testimonial" class="text-white nav-item">Testimonial</a></li>
+			  	<li class="mr-md-3 mr-2 nav-item dropdown"><a href="#contact-footer" class="text-white nav-item">Contact Us</a></li>
+			  </ul>
+		  </div>
 		</nav>
 	</section>
 	<section id="hero-banner">
-		<div class="container-fluid p-5">
+		<div class="container-fluid p-md-5">
 			<div class="row pt-5">
 				<div class="col-md-5  pt-5 content">
-					<h2 class="pt-5 ml-3 text-white" id="typed"></h2>
+					<div class="heading">
+						<h2 class="pt-5 ml-3 text-white"><span id="typed"></span></h2>
+					</div>
 					<p class="text-justify ml-3 text-white">Our passion to work hard and deliver excellent results. It could solve the needs of your customers and develop innovation.</p>
 				</div>
-				<div class="col-md-7 mt-5">
+				<div class="col-md-7 mt-md-5">
 					<div class="justify-content-center d-flex pt-5 mt-5">
 						<img src="images/tower3.png" class="hero-img">
 					</div>
@@ -339,35 +408,35 @@
 		<div class="container-fluid pt-3 pl-0 pr-0">
 			<h4 class="text-center">We power messages that encourage millions of users to take a next step, everyday. <hr class="divider"></h4>
 			<div class="tab-content-container d-flex justify-content-center mt-5 pl-3 pr-3" id="tab-carousel">
-				<ul class="nav nav-tabs">
-					<li class="nav-item">
-						<a href="#notify" class="nav-link active" data-toggle="tab">
+				<ul class="nav nav-tabs d-flex justify-content-center">
+					<li class="nav-item ">
+						<a href="#notify" class="nav-link active mb-4 mb-md-0" data-toggle="tab" title="notify">
 							<span class="text-center mb-4"><span class="icon-container"><i class="fas fa-bell"></i></span></span>Notify Customers
 						</a>
 					</li>
 					<li class="nav-item">
-						<a href="#confirm-transactions" class="nav-link" data-toggle="tab"><span class="text-center mb-4"><span class="icon-container"><i class="far fa-check-circle"></i></span></span>Confirm Transactions</a>
+						<a href="#confirm-transactions" class="nav-link mb-4 mb-md-0" data-toggle="tab" title="confirm-transactions"><span class="text-center mb-4"><span class="icon-container"><i class="far fa-check-circle"></i></span></span>Confirm Transactions</a>
 					</li>
 					<li class="nav-item">
-						<a href="#drive-sales" class="nav-link" data-toggle="tab"><span class="text-center mb-4"><span class="icon-container"><i class="fas fa-comments-dollar"></i></span></span>Drive Sales & Marketing</a>
+						<a href="#drive-sales" class="nav-link mb-4 mb-md-0" data-toggle="tab" title="drive-sales"><span class="text-center mb-4"><span class="icon-container"><i class="fas fa-comments-dollar"></i></span></span>Drive Sales & Marketing</a>
 					</li>
 					<li class="nav-item">
-						<a href="#two-factor" class="nav-link" data-toggle="tab"><span class="text-center mb-4"><span class="icon-container"><i class="fas fa-user-lock"></i></span></span>2-Factor Authentication</a>
+						<a href="#two-factor" class="nav-link mb-4 mb-md-0" data-toggle="tab" title="two-factor"><span class="text-center mb-4"><span class="icon-container"><i class="fas fa-user-lock"></i></span></span>2-Factor Authentication</a>
 					</li>
 					<li class="nav-item">
-						<a href="#fraud-prevention" class="nav-link" data-toggle="tab"><span class="text-center mb-4"><span class="icon-container"><i class="fas fa-fingerprint"></i></span></span>Fraud Prevention</a>
+						<a href="#fraud-prevention" class="nav-link mb-4 mb-md-0" data-toggle="tab" title="fraud-prevention"><span class="text-center mb-4"><span class="icon-container"><i class="fas fa-fingerprint"></i></span></span>Fraud Prevention</a>
 					</li>
 				</ul>
 			</div>
 			<div class="tab-content mb-5">
 				<div class="container-fluid tab-pane active" id="notify">
 					<div class="row">
-						<div class="col-md-6">
+						<div class="col-md-6 order-1 order-md-1">
 							<div class="img-col d-flex justify-content-center pt-5">
 								<img src="images/notify2.png" style="height: 100%; width: 100%;">
 							</div>
 						</div>
-						<div class="col-md-6 p-5">
+						<div class="col-md-6 p-md-5 pt-3 pt-md-0 order-2 order-md-2">
 							<h4 class="text-center mb-3">Notify Customers</h4>
 							<h6 class="mb-4">Integrate our SMS API to send time-critical reminders and notifications.</h6>
 							<ul>
@@ -381,7 +450,7 @@
 				</div>
 				<div class="container-fluid tab-pane" id="confirm-transactions">
 					<div class="row">
-						<div class="col-md-6 p-5">
+						<div class="col-md-6 p-md-5 pt-3 pt-md-0 order-2 order-md-1">
 							<h4 class="text-center mb-3">Confirm Transactions</h4>
 							<h6 class="mb-4">Send purchase receipts, ticket information, and order confirmations via an SMS message.</h6>
 							<ul>
@@ -391,7 +460,7 @@
 								<li>Cancellation and confirmations alert</li>
 							</ul>
 						</div>
-						<div class="col-md-6">
+						<div class="col-md-6 order-1 order-md-2">
 							<div class="img-col d-flex justify-content-center pt-5">
 								<img src="images/confirm-transaction.png" style="height: 100%; width: 100%;">
 							</div>
@@ -400,12 +469,12 @@
 				</div>
 				<div class="container-fluid tab-pane" id="drive-sales">
 					<div class="row">
-						<div class="col-md-6">
+						<div class="col-md-6 order-1 order-md-2">
 							<div class="img-col d-flex justify-content-center pt-5">
 								<img src="images/marketing.png" style="height: 80%; width: 80%;">
 							</div>
 						</div>
-						<div class="col-md-6 p-5">
+						<div class="col-md-6 p-md-5 pt-3 pt-md-0 order-2 order-md-2">
 							<h4 class="text-center mb-3">Drive Sales and Marketing</h4>
 							<h6 class="mb-4">With high conversion rates, increase sales with SMS marketing campaigns.</h6>
 							<ul>
@@ -420,7 +489,7 @@
 				</div>
 				<div class="container-fluid tab-pane" id="two-factor">
 					<div class="row">
-						<div class="col-md-6 p-5">
+						<div class="col-md-6 p-md-5 pt-3 pt-md-0 order-2 order-md-1">
 							<h4 class="text-center mb-3">2-Factor Authentication</h4>
 							<h6 class="mb-4">Time-based one-time passwords and SMS PIN codes for 2FA in a single API.</h6>
 							<ul>
@@ -430,7 +499,7 @@
 								<li>Your business deserves best software</li>
 							</ul>
 						</div>
-						<div class="col-md-6">
+						<div class="col-md-6 order-1 order-md-2">
 							<div class="img-col d-flex justify-content-center pt-5">
 								<img src="images/two-factor.png" style="height: 90%; width: 90%;">
 							</div>
@@ -439,12 +508,12 @@
 				</div>
 				<div class="container-fluid tab-pane" id="fraud-prevention">
 					<div class="row">
-						<div class="col-md-6">
+						<div class="col-md-6 order-1 order-md-2">
 							<div class="img-col d-flex justify-content-center pt-5">
 								<img src="images/fraud-prevention.png" style="height: 80%; width: 80%;">
 							</div>
 						</div>
-						<div class="col-md-6 p-5">
+						<div class="col-md-6 p-md-5 pt-3 pt-md-0 order-2 order-md-1">
 							<h4 class="text-center mb-3">Fraud Prevention</h4>
 							<h6 class="mb-4">Industry-standard algorithms, approved IP addresses, & secure HTTPS API connections.</h6>
 							<ul>
@@ -463,7 +532,7 @@
 			<div class="row">
 				<div class="col-md-6 pt-5 pb-5">
 					<h4 class="text-center ">SMS MARKETING AND ALERTS MADE EASY<hr class="divider"></h4>
-					<div class="accordion pl-4 pr-4" id="sms-accordion">
+					<div class="accordion pl-md-4 pr-md-4" id="sms-accordion">
 					  <div class="card">
 					    <div class="card-header" id="sms-ac-1">
 					      <h2 class="mb-0">
@@ -546,7 +615,7 @@
 			<h4 class="text-center mt-5">What Our Client Say <hr class="divider"></h4>
 			<div class="container mb-5 testimonial-container">
 				<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-				  <div class="carousel-inner mb-5 pl-5 pr-5">
+				  <div class="carousel-inner mb-5 pl-md-5 pr-md-5">
 				    <div class="carousel-item active">
 			            <p class="text-center"><i class="fa fa-quote-left"></i> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 			            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -601,31 +670,43 @@
 					<div class="price-table-tb container pl-0 pr-0">
 						<table class="container">
 							<tr class="col-md-5">
-								<td class="text-center p-2 mb-0 right-border start-row"><h4>Quantity & Prices</h4></td>
-								<td class="text-center p-2 mb-0 start-row"><img src="images/pricing-icon-sp.svg"></td>
+								<td class="text-center p-2 mb-0 right-border start-row"><h4 class="mb-0">SMS Bundle</h4></td>
+								<td class="text-center p-2 mb-0 right-border start-row"><h4 class="mb-0">Price Per SMS</h4></td>
+								<td class="text-center p-2 mb-0  start-row"><h4 class="mb-0">Bundle Price</h4></td>
 							</tr>
 							<tr class="col-md-5">
-								<td class="text-center p-2 mb-0 right-border"><h5>10,000 Sms</h5></td>
-								<td class="text-center p-2 mb-0"><h5>18p/sms</h5></td>
+								<td class="text-center p-2 mb-0 right-border"><h5 class="mb-0">10 Sms</h5></td>
+								<td class="text-center p-2 mb-0 right-border"><h5 class="mb-0">FREE</h5></td>
+								<td class="text-center p-2 mb-0 "><h5 class="mb-0">FREE</h5></td>
 							</tr>
-							<tr class="col-md-5">
-								<td class="text-center p-2 mb-0 right-border"><h5>20,000 Sms</h5></td>
-								<td class="text-center p-2 mb-0"><h5>16p/sms</h5></td>
+							<tr class="col-md-5 alternate">
+								<td class="text-center p-2 mb-0 right-border"><h5 class="mb-0">10,000 Sms</h5></td>
+								<td class="text-center p-2 mb-0 right-border"><h5 class="mb-0">18p/sms</h5></td>
+								<td class="text-center p-2 mb-0 "><h5 class="mb-0">₹ 1800</h5></td>
 							</tr>
-							<tr>
-								<td class="text-center p-2 mb-0 right-border"><h5>50,000 Sms</h5></td>
-								<td class="text-center p-2 mb-0"><h5>15p/sms</h5></td>
+							<tr class="col-md-5 ">
+								<td class="text-center p-2 mb-0 right-border"><h5 class="mb-0">20,000 Sms</h5></td>
+								<td class="text-center p-2 mb-0 right-border"><h5 class="mb-0">16p/sms</h5></td>
+								<td class="text-center p-2 mb-0"><h5 class="mb-0">₹ 3200</h5></td>
 							</tr>
-							<tr>
-								<td class="text-center p-2 mb-0 right-border"><h5>1 Lakh Sms</h5></td>
-								<td class="text-center p-2 mb-0"><h5>13.5p/sms</h5></td>
+							<tr class="alternate">
+								<td class="text-center p-2 mb-0 right-border"><h5 class="mb-0">50,000 Sms</h5></td>
+								<td class="text-center p-2 mb-0 right-border"><h5 class="mb-0">15p/sms</h5></td>
+								<td class="text-center p-2 mb-0"><h5 class="mb-0">₹ 7500</h5></td>
 							</tr>
-							<tr>
-								<td class="text-center p-2 mb-0 right-border"><h5>Above 1 Lakh Sms</h5></td>
-								<td class="text-center p-2 mb-0"><h5>13.5p/sms</h5></td>
+							<tr class="">
+								<td class="text-center p-2 mb-0 right-border"><h5 class="mb-0">1 Lakh Sms</h5></td>
+								<td class="text-center p-2 mb-0 right-border"><h5 class="mb-0">13.5p/sms</h5></td>
+								<td class="text-center p-2 mb-0"><h5 class="mb-0">₹ 13500</h5></td>
 							</tr>
-							<tr>
-								<td class="text-center p-2 mb-0 last-row"><h6>*GST applicable on all prices.</h6></td>
+							<tr class="alternate">
+								<td class="text-center p-2 mb-0 right-border"><h5 class="mb-0">Above 1 Lakh Sms</h5></td>
+								<td class="text-center p-2 mb-0 right-border"><h5 class="mb-0">-</h5></td>
+								<td class="text-center p-2 mb-0"><h5 class="mb-0"><a href="#contact-footer" class="sb-btn btn">Contact Sales</a></h5></td>
+							</tr>
+							<tr class="">
+								<td class="text-center p-2 mb-0 last-row"><h6 class="mb-0">*GST applicable on all prices.</h6></td>
+								<td class="text-center p-2 mb-0 last-row"></td>
 								<td class="text-center p-2 mb-0 last-row"></td>
 							</tr>
 						</table>
@@ -646,7 +727,7 @@
 		</div>
 	</section>
 	<section id="contact-footer">
-		<div class="container-fluid contact-footer-container p-5">
+		<div class="container-fluid contact-footer-container p-md-5 pt-4 pl-3 pr-3">
 			<div class="row">
 				<div class="col-md-4">
 					<img src="images/aarcons.png" style="height: 3rem; ">
@@ -657,7 +738,7 @@
 				</div>
 				<div class="col-md-4">
 					<h5 class="contact-head mb-3 pb-2">Contact Us</h5>
-					<div class="form-div">
+					<div class="form-div mb-5 mb-md-0">
 						<form method="post" class="contact-form">
 							<div class="form-group">
 								<input type="text" name="name" class="form-control" placeholder="Your Name" required>
@@ -681,13 +762,13 @@
 					</div>
 				</div>
 				<div class="col-md-4">
-					<h5 class="ml-4 contact-head mb-3 pb-2">Get in Touch</h5>
-					<div class="container-fluid ml-3">
+					<h5 class="ml-md-4 contact-head mb-3 pb-2">Get in Touch</h5>
+					<div class="container-fluid ml-md-3">
 						<div class="row">
 							<div class="col-1">
 								<i class="fas fa-map-marker-alt"></i>
 							</div>
-							<div class="col-11">
+							<div class="col-10 col-md-11">
 								<p>Gyanodaya Campus, Gram: Kanawati, Neemuch (M.P) - 458441</p>
 							</div>
 						</div>
@@ -695,7 +776,7 @@
 							<div class="col-1">
 								<i class="fas fa-mobile-alt"></i>
 							</div>
-							<div class="col-11">
+							<div class="col-10 col-md-11">
 								<p>+91 7566075707</p>
 							</div>
 						</div>
@@ -703,13 +784,16 @@
 							<div class="col-1">
 								<i class="fas fa-envelope"></i>
 							</div>
-							<div class="col-11">
+							<div class="col-10 col-md-11">
 								<p>aarambhnmh@gmail.com</p>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
+		</div>
+		<div class="text-center copyright text-white p-2" style="border-top: 0.1px solid #fff;">
+		&copy This Website is Copyrighted to <b>Aarambh E-Services Pvt. Ltd.</b><br>Designed and Developed By <a href="http://aarcon.in">Team Aarcons</a> (All Rights Reserved)
 		</div>
 	</section>
 </body>
@@ -734,7 +818,7 @@
 	</script> -->
 	<script type="text/javascript">
 		 var typed2 = new Typed('#typed', {
-		    strings: ['Manage your business communications in one place.', 'APIs Messaging', 'Transactional SMS','OTP SMS', 'Promotional SMS'],
+		    strings: ['Scrub SMS', 'APIs Messaging', 'Transactional SMS','OTP SMS', 'Promotional SMS'],
 		    typeSpeed: 80,
 		    backSpeed: 50,
 		    backDelay: 1500,
@@ -746,28 +830,27 @@
 
 	</script>
 	<script type="text/javascript">
-		var tabChange = function(){
-        var tabs = $('.nav-tabs > li');
-        var active = tabs.filter('.active');
-        var next = active.next('li').length? active.next('li').find('a') : tabs.filter(':first-child').find('a');
-        // Bootsrap tab show, para ativar a tab
-        next.tab('show')
-    }
-    // Tab Cycle function
-    var tabCycle = setInterval(tabChange, 1000)
-    // Tab click event handler
-    $(function(){
-        $('.nav-tabs a').click(function(e) {
-            e.preventDefault();
-            // Parar o loop
-            clearInterval(tabCycle);
-            // mosta o tab clicado, default bootstrap
-            $(this).tab('show')
-            // Inicia o ciclo outra vez
-            setTimeout(function(){
-                tabCycle = setInterval(tabChange, 1000)//quando recomeça assume este timing
-            }, 1000);
-        });
-    });
+		var tabChange = function() {
+		  var tabs = $(".nav-tabs > li");
+		  var active = tabs.filter(".active").removeClass("active");
+		  var next = active.next("li").length
+		    ? active.next("li")
+		    : tabs.filter(":first-child")
+		  next.addClass("active").find("a").tab("show")
+		};
+		var tabCycle = setInterval(tabChange, 2000);
+		$(function() {
+		  $(".nav-tabs a").click(function(e) {
+		    e.preventDefault();
+		    $(".nav-tabs .active").removeClass("active")
+		    clearInterval(tabCycle);
+		    $(this).tab("show");
+		    $(this).parent().addClass("active");
+		    setTimeout(function() {
+		      tabCycle = setInterval(tabChange, 2000);
+		    }, 5000);
+		  });
+		});
+
 	</script>
 </html>
