@@ -29,6 +29,10 @@
 		$mobile = $_POST['phone'];
 		$subject = $_POST['subject'];
 		$message = $_POST['message'];
+		$h = "5.30";// Hour for time zone goes here e.g. +7 or -4, just remove the + or -
+		$hm = $h * 60;
+		$ms = $hm * 60;
+		date_default_timezone_set("Asia/Calcutta");
 		$time = date('d-m-Y, g:i a');
 		$values = [
 		[$name, $email, $mobile, $subject, $message, $time],
