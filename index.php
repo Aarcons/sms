@@ -29,8 +29,9 @@
 		$mobile = $_POST['phone'];
 		$subject = $_POST['subject'];
 		$message = $_POST['message'];
+		$time = date('d-m-Y, g:i a');
 		$values = [
-		[$name, $email, $mobile, $subject, $message],
+		[$name, $email, $mobile, $subject, $message, $time],
 		];
 		$body = new Google_Service_Sheets_ValueRange([
 			'values' => $values
