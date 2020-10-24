@@ -1,3 +1,69 @@
+<?php
+	require __DIR__ . '/vendor/autoload.php';
+	$client = new \Google_Client();
+	$client->setApplicationName('PHP and Google Sheet');
+	$client->setScopes([Google_Service_Sheets::SPREADSHEETS]);
+	$client->setAccessType('offline');
+	$client->setAuthConfig(__DIR__ . '/credentials.json');
+	$service = new Google_Service_Sheets($client);
+	$spreadsheetId = '1D8vNm2MlJy6VrJzMDNH7TSD15U_7Thvs_vjNrWmWPF8';
+	$range = "A1:E5";
+	$response = $service->spreadsheets_values->get($spreadsheetId, $range);
+	//$values = $response->getValues();
+
+	// if(empty($values)){
+	// 	print "No Data Found.\n";
+	// }else{
+	// 	foreach ($values as $row) {
+	// 		echo $row[0];
+
+	// 	}
+	// }
+
+	//set values and parameters
+
+	if (isset($_POST['submit'])) {
+
+		$name = $_POST['name'];
+		$email = $_POST['email'];
+		$mobile = $_POST['phone'];
+		$subject = $_POST['subject'];
+		$message = $_POST['message'];
+		$values = [
+		[$name, $email, $mobile, $subject, $message],
+		];
+		$body = new Google_Service_Sheets_ValueRange([
+			'values' => $values
+		]);
+
+		$params =  [
+			'valueInputOption' => 'RAW'
+		];
+
+		$insert = [
+			"insertDataOption" => "INSERT_ROWS"
+		];
+
+		//insert data
+
+		$result = $service->spreadsheets_values->append(
+			$spreadsheetId,
+			$range,
+			$body,
+			$params
+		);
+		
+		//unset($_POST);
+		header("Location: index.php");
+	}
+		// else{
+		// 	print "No value in form";
+		// 	$name = "";
+		// }
+	
+
+
+?>
 <!DOCTYPE html>
 <html id="sms-index">
 <head>
@@ -759,7 +825,7 @@
 								<textarea class="form-control" name="message" rows="5" placeholder="Your Message" required></textarea>
 							</div>
 							<div class="d-flex justify-content-center">
-								<button type="submit" class="btn sb-btn">Submit</button>
+								<button type="submit" name="submit" class="btn sb-btn">Submit</button>
 							</div>
 						</form>
 					</div>
